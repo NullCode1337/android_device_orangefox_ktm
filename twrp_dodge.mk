@@ -24,13 +24,13 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
-# Inherit from PJZ110 device
-$(call inherit-product, device/oplus/PJZ110/device.mk)
+# Inherit from dodge device
+$(call inherit-product, device/oplus/dodge/device.mk)
 
-PRODUCT_DEVICE := PJZ110
-PRODUCT_NAME := twrp_PJZ110
+PRODUCT_DEVICE := dodge
+PRODUCT_NAME := twrp_dodge
 PRODUCT_BRAND := oplus
-PRODUCT_MODEL := PJZ110
+PRODUCT_MODEL := dodge
 PRODUCT_MANUFACTURER := oplus
 
 PRODUCT_GMS_CLIENTID_BASE := android-oplus
