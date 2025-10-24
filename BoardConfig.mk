@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/oplus/dodge
+DEVICE_PATH := device/oneplus/dodge
 
 
 # For building with minimal manifest
