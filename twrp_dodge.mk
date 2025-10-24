@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
 # Inherit from dodge device
-$(call inherit-product, device/oplus/dodge/device.mk)
+$(call inherit-product, device/oneplus/dodge/device.mk)
 
 PRODUCT_DEVICE := dodge
 PRODUCT_NAME := twrp_dodge
