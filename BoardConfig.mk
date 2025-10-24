@@ -4,6 +4,9 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+# Copyright (C) 2024 The OrangeFox Recovery Project
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
 
 DEVICE_PATH := device/oneplus/dodge
 
@@ -118,7 +121,6 @@ TW_USE_FSCRYPT_POLICY := 2
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_INCLUDE_FASTBOOTD := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TW_SKIP_ADDITIONAL_FSTAB := true
 
 # Tool
