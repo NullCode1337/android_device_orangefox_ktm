@@ -17,7 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="dodge"
+FDEVICE="ktm"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep -w $FDEVICE)
@@ -53,14 +53,14 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_FSCK_EROFS_BINARY=1
 	export FOX_USE_PATCHELF_BINARY=1
 
-	# For OnePlus 13
-	export TARGET_DEVICE_ALT="PJZ110,OP5D55L1,OP5D0DL1,CPH2649,CPH2653,CPH2655"
+	# For OnePlus Ace 6
+	export TARGET_DEVICE_ALT="OP6113L1,PLQ110"
 	export FOX_TARGET_DEVICES="$TARGET_DEVICE_ALT"
    	export FOX_USE_DMSETUP=1
 	export FOX_ENABLE_KERNELSU_SUPPORT=1
 	export FOX_ENABLE_KERNELSU_NEXT_SUPPORT=1
 	export FOX_ENABLE_SUKISU_SUPPORT=1
 	export FOX_BUILD_TYPE=Stable
-	export FOX_MAINTAINER_PATCH_VERSION=2
+	export FOX_MAINTAINER_PATCH_VERSION=1
 fi
 #

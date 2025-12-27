@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2025 The Android Open Source Project
-# Copyright (C) 2025 SebaUbuntu's TWRP device tree generator
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,7 +7,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
-LOCAL_PATH := device/oneplus/dodge
+LOCAL_PATH := device/oneplus/ktm
 
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 34
@@ -32,5 +31,5 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # some OrangeFox-specific settings
-$(call inherit-product, $(LOCAL_PATH)/fox_dodge.mk)
+$(call inherit-product, $(LOCAL_PATH)/fox_ktm.mk)
 #

@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2025 The Android Open Source Project
-# Copyright (C) 2025 SebaUbuntu's TWRP device tree generator
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -27,21 +26,21 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
-# Inherit from dodge device
-$(call inherit-product, device/oneplus/dodge/device.mk)
+# Inherit from ktm device
+$(call inherit-product, device/oneplus/ktm/device.mk)
 
-PRODUCT_DEVICE := dodge
-PRODUCT_NAME := twrp_dodge
+PRODUCT_DEVICE := ktm
+PRODUCT_NAME := twrp_ktm
 PRODUCT_BRAND := oneplus
-PRODUCT_MODEL := OnePlus 13
+PRODUCT_MODEL := OnePlus Ace 6
 PRODUCT_MANUFACTURER := oneplus
 
 PRODUCT_GMS_CLIENTID_BASE := android-oplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sun-user 15 AP3A.240617.008 1749744156655 release-keys"
+    PRIVATE_BUILD_DESC="qssi-user 16 BP2A.250605.015 1762272835359 release-keys"
 
-BUILD_FINGERPRINT := oplus/ossi/ossi:15/AP3A.240617.008/1749744156655:user/release-keys
+BUILD_FINGERPRINT := oplus/ossi/ossi:16/BP2A.250605.015/1762272835359:user/release-keys
 
 # Theme
 TW_STATUS_ICONS_ALIGN := center

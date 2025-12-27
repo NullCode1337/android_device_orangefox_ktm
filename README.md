@@ -1,24 +1,23 @@
-# OnePlus 13 dodge Android device tree
+# Ace 6 (PLQ110) Android device tree
 
-## Working
+## Status
 
 - [X] Display
-- [X] Touch (Even in FastbootD)
-- [X] Decryption
-- [X] Flashing
-- [X] Backup & Restore
 - [X] MTP/OTG Storage
 - [X] ADB/FastbootD
-- [X] Factory Reset
 - [X] Vibrator
 - [X] Display & Vibration Settings
+- [X] Flashing 
+- [X] Backup & Restore 
+- [X] Factory Reset
+- [ ] Touch
+  - Ace6 requires custom oplus firmware to handle touch input
+- [ ] Decryption
+  - Ace6 uses TMS Secure Element which is incompatible with current setup
 
-## Not working
-- [ ] ????????
+# Building
 
-# How To Build
-
-### Clone & Sync Source
+### Clone & sync source
 ```
 mkdir -p ~/OrangeFox_14
 cd ~/OrangeFox_14
@@ -26,17 +25,17 @@ git clone https://gitlab.com/OrangeFox/sync.git
 cd sync
 ./orangefox_sync.sh --branch 14.1 --path ~/fox_14.1
 ```
-### Clone Device-tree
+### Clone device tree
 ```
 cd ~/fox_14.1/device
 mkdir -p oneplus
 cd oneplus
-git clone https://gitlab.com/OrangeFox/device/dodge.git dodge
+git clone https://github.com/NullCode1337/ofox_device_oneplus_ktm ktm
 ```
-### BUILD!
+### BUILD
 ```
 cd ~/fox_14.1
 source build/envsetup.sh
-lunch twrp_dodge-ap2a-eng
+lunch twrp_ktm-ap2a-eng
 mka adbd recoveryimage
 ```
