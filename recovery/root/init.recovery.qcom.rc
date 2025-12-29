@@ -25,8 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on early-init
-    start vendor.gatekeeper_default
+on early-fs
+    write /proc/sys/walt/sched_lib_name "recovery,Updater,updater,update_engine_sideload"
+    write /proc/sys/walt/sched_lib_mask_force 255
 
 service post-boot-script /system/bin/sh -c /vendor/bin/init.kernel.post_boot-sun_default_6_2.sh
     user root
@@ -34,15 +35,12 @@ service post-boot-script /system/bin/sh -c /vendor/bin/init.kernel.post_boot-sun
     oneshot
     seclabel u:r:recovery:s0
 
-on early-fs
-    write /proc/sys/walt/sched_lib_name "recovery,Updater,updater,update_engine_sideload"
-    write /proc/sys/walt/sched_lib_mask_force 255
-
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
     start vendor.boot-qti
     setprop prepdecrypt.setpatch true
+    start vendor.gatekeeper_default
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
@@ -63,6 +61,7 @@ on property:twrp.modules.loaded=true
     wait /sys/kernel/boot_adsp/ssr
     write /sys/kernel/boot_adsp/ssr 1
     wait /sys/class/power_supply/battery
+    symlink /firmware /vendor/firmware_mnt
     start vendor.health-default
     start vendor.oplus.vibrator
     umount /firmware
