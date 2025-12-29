@@ -17,6 +17,7 @@
 # AVB partitions
 /vbmeta         emmc    /dev/block/bootdevice/by-name/vbmeta                                flags=slotselect;display="VBMeta";backup=1;flashimg=1
 /vbmeta_system  emmc    /dev/block/bootdevice/by-name/vbmeta_system                         flags=slotselect;display="VBMeta System";backup=1;flashimg=1
+/vbmeta_vendor  emmc    /dev/block/bootdevice/by-name/vbmeta_vendor                         flags=slotselect;display="vbmeta_vendor";backup=1;flashimg=1
 
 # Persistent Firmware & Properties
 /firmware       vfat    /dev/block/bootdevice/by-name/modem                                 flags=slotselect;display="Firmware";mounttodecrypt;fsflags="ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0"
