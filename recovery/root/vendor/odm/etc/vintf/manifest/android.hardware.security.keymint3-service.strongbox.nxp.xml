@@ -1,5 +1,5 @@
 <manifest version="1.0" type="device">
-    <hal format="aidl">
+    <!-- <hal format="aidl">
         <name>android.hardware.security.keymint</name>
         <version>3</version>
         <fqname>IKeyMintDevice/strongbox</fqname>
@@ -8,9 +8,5 @@
         <name>android.hardware.security.keymint</name>
         <version>3</version>
         <fqname>IRemotelyProvisionedComponent/strongbox</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.security.sharedsecret</name>
-        <fqname>ISharedSecret/strongbox</fqname>
-    </hal>
+    </hal> -->
 </manifest>

@@ -1,7 +1,7 @@
 service vendor.gatekeeper_default /vendor/bin/hw/android.hardware.gatekeeper-service-qti
     class early_hal
-    user root
-    group root
+    user system
+    group system
     disabled
     seclabel u:r:recovery:s0
 
