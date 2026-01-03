@@ -4,16 +4,14 @@
 
 - [X] Display
 - [X] MTP/OTG Storage
-- [X] ADB/FastbootD
+- [X] ADB/Fastbootd
 - [X] Vibrator
-- [X] Display & Vibration Settings
+- [X] Display Settings
 - [X] Flashing 
 - [X] Backup & Restore 
 - [X] Factory Reset
-- [ ] Touch
-  - Ace6 requires custom oplus firmware to handle touch input
-- [ ] Decryption
-  - Ace6 uses TMS Secure Element which is incompatible with current setup
+- [X] Touch
+- [X] Decryption
 
 # Building
 
