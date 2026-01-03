@@ -28,7 +28,7 @@ cd sync
 cd ~/fox_14.1/device
 mkdir -p oneplus
 cd oneplus
-git clone https://github.com/NullCode1337/ofox_device_oneplus_ktm ktm
+git clone https://github.com/NullCode1337/android_device_orangefox_ktm ktm
 ```
 ### BUILD
 ```

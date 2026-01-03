@@ -19,7 +19,7 @@
 #
 
 
- OF_MAINTAINER := NullCode1337, kmiit, koaaN
+ OF_MAINTAINER := NullCode1337, koaaN, kmiit
  OF_SCREEN_H := 2378
  OF_STATUS_INDENT_LEFT := 70
  OF_STATUS_INDENT_RIGHT := 70
