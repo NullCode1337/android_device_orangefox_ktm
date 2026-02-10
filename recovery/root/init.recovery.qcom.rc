@@ -64,7 +64,6 @@ on property:twrp.modules.loaded=true
     start override-spl
     symlink /firmware /vendor/firmware_mnt
     start vendor.health-default
-    start vendor.oplus.vibrator
     umount /firmware
 
 on property:hwservicemanager.ready=true
@@ -72,4 +71,4 @@ on property:hwservicemanager.ready=true
 
 on property:vendor.sys.listeners.registered=true
     start vendor.ssgtzd
-
+    start vendor.oplus.vibrator
